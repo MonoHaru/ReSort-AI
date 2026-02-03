@@ -1,26 +1,28 @@
-# Trash-detection
-Using Yolov5 model with TACO dataset
+# ReSort-AI: Recycling Sorting Automation with AI Vision System
+*(AI 비전 시스템을 활용한 재활용품 분류 자동화 시스템)*
 
-2021-11-13 ~ 2021-11-14
+ReSort-AI는 분리수거 처리 시설에서 재사용 가능한 폐품을 자동으로 검출·선별하는 것을 목표로 하는 시스템입니다. 카메라 영상(또는 이미지)을 입력으로 받아 객체 탐지 기반 AI 모델을 통해 재사용 가능 품목을 식별하며, 이를 통해 버려지는 폐품으로 인한 비용 손실을 줄이고 운영·유지 비용을 절감할 수 있습니다. 본 프로젝트에서는 폐기물 환경에 특화된 탐지를 위해 TACO 데이터셋을 활용해 모델을 전이학습하는 실험을 포함합니다.
 
-# 폐기물 처리 업체를 위한 AI 폐품 검출 시스템
+## ⚙️ Tech Stacks
+- YOLOv5
+- PyTorch
+- Python
 
-# Outline
-1. 분리수거 처리 시설에서 재사용가능한 폐품만 검출하는 시스템.
+## ✨ Features
+1. 카메라 영상 기반 **재사용 가능 폐품 객체 탐지**
+2. 폐기물 이미지 데이터 기반 **TACO 데이터셋 전이학습**
+3. 선별 자동화를 통한 **비용 손실 감소 및 운영 효율 향상**
 
-# Benefit
-1. 버려지는 폐품에 대한 비용 손실을 줄일 수 있다.
-2. 폐기물 처리 업체에서 사용하는 유지비를 절감 할 수 있다.
+## 🧭 Overview
+<img src="https://github.com/MonoHaru/CephLD-CCA/blob/main/assets/overview.png" alt="overview" width="700">
 
-# Functions
-1. 영상이나 이미지를 받아 학습시킨 데이터(TACO)를 기반으로 결과를 보여준다.
+## 🎬 **Demo** 
+https://github.com/user-attachments/assets/ed728e64-40eb-47c5-a4e4-7277d481bf76
 
-# TroubleShooting
-1. Overfitting이 발생하여 성능 향상이 더이상 이뤄지지 않았다. ->> Overfitting을 줄일 수 있는 작업들을 추가로 해봐야겠다.
-2. 물체들을 객체로 보지않고 아닌 순간순간마다 물체로써만 부여하는 Yolo의 특성으로 인해 정확도가 많이 떨어졌다. ->> 다른 모델(Semantic Segmentation, Instance Segmentation 관련 model)을 사용해서 학습시켜보고 싶다.
+## 🔮 **Future Work** 
+1. 학습 과정에서 발생하는 과적합(overfitting)을 완화하기 위한 정규화 및 일반화 기법 적용(ex: augmentation, regularization, early stopping 등)
+2. 검출 결과를 기반으로 로봇 팔 등 물리 장비와 연동하여 수거/이송까지 포함한 완전 자동화 파이프라인 구축
+3. 더 정교한 분리를 위해 Semantic/Instance Segmentation 기반 접근 방법 적용 및 성능 비교
 
-# Futher
-1. 로봇 팔도 만들어서 같이 구동시켜보고 싶다.
-
-# How to use
-1. data folder나 models folder의 카테고리 수 등을 바꾸어 주어야하고, 사용하고자 하는 data에 따라 yaml에서의 경로설정을 다시 해줘야한다. 그리고 이 코드의 특징인 Yolo에 따라 coco format의 데이터를 object detection형태로 전환하는 prepareDataset를 잘 활용해아한다.
+## 📜 License
+The code in this repository is released under the GPL-3.0 License.
