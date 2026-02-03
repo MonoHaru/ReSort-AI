@@ -14,7 +14,7 @@ ReSort-AI는 분리수거 처리 시설에서 재사용 가능한 폐품을 자�
 3. 선별 자동화를 통한 **비용 손실 감소 및 운영 효율 향상**
 
 ## 🧭 Overview
-<img src="https://github.com/MonoHaru/CephLD-CCA/blob/main/assets/overview.png" alt="overview" width="700">
+<img src="https://github.com/MonoHaru/ReSort-AI/blob/main/assets/overview.png" alt="overview" width="700">
 
 ## 🎬 **Demo** 
 https://github.com/user-attachments/assets/ed728e64-40eb-47c5-a4e4-7277d481bf76
